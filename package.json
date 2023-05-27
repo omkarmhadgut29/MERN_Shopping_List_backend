@@ -13,7 +13,7 @@
         "netlify-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
         "build-client": "npm install --prefix client && npm run build --prefix client",
         "buiild-server": "npm install",
-        "build": "concurrently \"npm run buiild-server\" \"npm run build-client\""
+        "build": "npm run buiild-server"
     },
     "author": "Omkar Mhadgut",
     "license": "ISC",
