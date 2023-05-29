@@ -10,7 +10,7 @@
         "server": "nodemon server.js",
         "client": "npm run dev --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "netlify-postbuild": "npm install --prefix client && npm install --save-dev --prefix client && npm run build --prefix client",
+        "netlify-postbuild": "npm install --prefix client && npm run build --prefix client",
         "build-client": "npm install --prefix client && npm run build --prefix client",
         "buiild-server": "npm install",
         "netlify-build": "netlify deploy --prod",
