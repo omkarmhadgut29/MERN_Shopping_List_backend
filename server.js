@@ -19,6 +19,12 @@ app.use(express.json());
 // Bodyparser middleware
 app.use(bodyParser.json());
 
+app.use(
+    cors({
+        origin: ["https://mernshoppinglistfrontend-production.up.railway.app/"],
+    })
+);
+
 // Write all Routes here
 
 app.get("/", (req, res) => {
