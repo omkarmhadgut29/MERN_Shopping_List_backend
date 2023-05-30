@@ -12,12 +12,14 @@
         "start": "nodemon server.js",
         "server": "nodemon server.js",
         "client": "npm run dev --prefix client",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "netlify-postbuild": "npm install --prefix client && npm run build --prefix client",
+        "client-build": "npx http-server ./dist --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client-build\"",
+        "start-build": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
         "build-client": "npm install --prefix client && npm run build --prefix client",
         "buiild-server": "npm install",
         "netlify-build": "netlify deploy --prod",
-        "build": "npm run netlify-build && npm run netlify-postbuild"
+        "build": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
     },
     "author": "Omkar Mhadgut",
     "license": "ISC",
