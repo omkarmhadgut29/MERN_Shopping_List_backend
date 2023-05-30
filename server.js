@@ -20,11 +20,13 @@ app.use(express.json());
 // Bodyparser middleware
 app.use(bodyParser.json());
 
-app.use(
-    cors({
-        origin: ["https://mernshoppinglistfrontend-production.up.railway.app"],
-    })
-);
+// app.use(
+//     cors({
+//         origin: ["https://mernshoppinglistfrontend-production.up.railway.app"],
+//     })
+// );
+
+app.use(cors());
 
 // Write all Routes here
 
