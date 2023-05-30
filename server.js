@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 app.use(
     cors({
-        origin: ["https://mernshoppinglistfrontend-production.up.railway.app/"],
+        origin: ["https://mernshoppinglistfrontend-production.up.railway.app"],
     })
 );
 
