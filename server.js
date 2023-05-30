@@ -4,6 +4,7 @@ import { errorHandler } from "./middleware/errorHandler.js";
 import { connectDb } from "./config/dbConnection.js";
 import bodyParser from "body-parser";
 import itemRouter from "./router/api/ItemRouter.js";
+import cors from "cors";
 import path from "path";
 
 dotenv.config();
