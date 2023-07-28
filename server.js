@@ -31,7 +31,7 @@ app.use(cors());
 // Write all Routes here
 
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    res.json({ message: "Hello, world!" });
 });
 
 app.use("/api/items", itemRouter);
